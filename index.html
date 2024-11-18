@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+    </style>
+
+    
+    
+
+    <title>RESUME GENETOR</title>
+  </head>
+  <body>
+    <div class="bodyColor" id="cv-from">
+      <div class="container">
+        <h1 class="heading">RESUME GENETOR</h1>
+        <p class="heading">BY SHAHZAIB ALI</p>
+
+        <div class="grid_layout">
+          <div class="perinfo">
+            <h3>Personal Infromation</h3>
+
+            <div class="mt">
+              <label for="USER_NAME">User Name</label><br />
+              <input
+                type="text"
+                id="USER_NAME"
+                class="input-class"
+                placeholder="Enter Here"
+              />
+            </div>
+
+            <div class="mt">
+              <label for="Contact"> Your Contact</label><br />
+              <input
+                type="text"
+                id="Contact"
+                class="input-class"
+                placeholder="Enter Here"
+              />
+            </div>
+
+            <div class="mt">
+              <label for="Address"> Your Address</label><br />
+              <textarea
+                id="Address"
+                placeholder="Enter Here"
+                class="professional-input"
+              ></textarea>
+            </div>
+
+            <h2>Social Media Links</h2>
+
+            <div class="mt">
+              <label for="Facebook">Facebook</label><br />
+              <input
+                type="text"
+                id="Facebook"
+                class="input-class"
+                placeholder="Enter Link"
+              />
+            </div>
+
+            <div class="mt">
+              <label for="Instagram">Instagram</label><br />
+              <input
+                type="text"
+                id="Instagram"
+                class="input-class"
+                placeholder="Enter Link"
+              />
+            </div>
+
+            <div class="mt">
+              <label for="LinkedIn">LinkedIn</label><br />
+              <input
+                type="text"
+                id="LinkedIn"
+                class="input-class"
+                placeholder="Enter Link"
+              />
+            </div>
+
+            <div class="mt3">
+              <label for="imgFeild">Select Your Picture</label>
+              <input type="file" id="imgFeild" class="professional-input" />
+            </div>
+          </div>
+ <!-- ========================================================================================== -->
+          <div>
+            <h3>Professional Infromation</h3>
+
+            <div class="mt">
+              <label for="Objective" class="label-cl">Objective</label><br />
+              <textarea
+                id="Objective"
+                placeholder="Enter Here"
+                class="professional-input"
+              ></textarea>
+            </div>
+
+            <div class="mt from-group" id="workEx">
+              <label for="Experience" class="label-cl">Work Experience</label
+              ><br />
+              <textarea
+                id="Experience"
+                placeholder="Enter Here"
+                class="professional-input weFeild from-control"
+              ></textarea>
+
+              <div class="txt" id="weFeildButton">
+                <button onclick="Add_NEW_FIELD()" class="animated-button txt">
+                  ADD MORE
+                </button>
+              </div>
+            </div>
+
+            <div class="mt from-group" id="acadmicQlification">
+              <label for="Acadmic_Qualification" class="label-cl"
+                >Acadmic Qualification</label
+              ><br />
+              <textarea
+                id="Acadmic_Qualification"
+                placeholder="Enter Here"
+                class="professional-input eqFeild form-control"
+              ></textarea>
+
+              <div class="txt" id="eqFeildButton">
+                <button onclick="NEW_FEILD()" class="animated-button txt">
+                  ADD MORE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="txt txt-gene">
+          <button onclick="generateCV()" class="animated-button">
+            GENERATE RESUME
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--    cv template -->
+
+    <div class="container1" id="cv-template">
+      <div class="grid_layout_cv">
+        <!-- ================================================ -->
+
+        <div>
+          <!-- frist template -->
+
+          <div class="bgcolor">
+            <img
+              src="th.jpeg"
+              alt="this is defualt picture "
+              class="img-style"
+              id="img_template"
+            />
+
+            <div class="allheading"><h2>Personal Info</h2></div>
+
+            <div class="Personalinfo">
+              <p id="nameT1">SHAHZAIB ALI</p>
+              <p id="contactT">92:03180255469 + 03161304188</p>
+              <p id="addressT">
+                landhi no 2 Shakalid colony Area 37 / A karachi pakistan
+              </p>
+            </div>
+
+            <div class="allheading"><h2>Social Media Links</h2></div>
+
+            <div class="socaillink">
+              <p>
+                <a id="fbT" href="https://www.facebook.com/">Facebook</a>
+              </p>
+              <p>
+                <a id="instaT" href="https://www.instagram.com/">Instagram</a>
+              </p>
+              <p>
+                <a id="linkedT" href="">LinkedIn</a>
+              </p>
+            </div>
+
+            <!-- ========================bgcolor================== -->
+          </div>
+          <!-- frist template -->
+        </div>
+
+        <!-- ======================================================================================= -->
+
+        <div>
+          <!-- second temlate -->
+          <div class="S_all_heading">
+            <h1 id="nameT2">SHAHZAIB ALI</h1>
+          </div>
+
+          <!-- Objective  card -->
+          <div class="card">
+            <div class="card-header">
+              <h3>Objective</h3>
+            </div>
+            <div class="card-body">
+              <p id="ObjectiveT">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis expedita perferendis nam blanditiis quod ipsum, quo
+                laboriosam natus vel minima dolorum porro molestias repudiandae
+                illum maiores, est earum sint id.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experience card -->
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Experience</h3>
+            </div>
+            <div class="card-body">
+              <div class="mt1">
+                <ul id="ExperienceT">
+                  <li>home</li>
+                  <li>home</li>
+                  <li>home</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--  Acadmic quilification card -->
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Acadmic Quilification</h3>
+            </div>
+            <div class="card-body">
+              <div class="mt1">
+                <ul id="AcadmicT">
+                  <li>home</li>
+                  <li>home</li>
+                  <li>home</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- second temlate -->
+        </div>
+        <!-- ============================================ -->
+      </div>
+    </div>
+
+    <div class="parentDiv" id="prbutton">
+      <button onclick="PrintCV()" class="pButton">Print Resume</button>
+    </div>
+  </body>
+</html>
